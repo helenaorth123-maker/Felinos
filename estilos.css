@@ -37,6 +37,7 @@ header{
      display: flex;      
       gap: 10px; 
       justify-content: center; 
+      margin: auto;
 }
 .container :hover{
     transform: scale(1.1);
