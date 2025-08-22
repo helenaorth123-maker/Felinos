@@ -29,6 +29,9 @@ header{
 .machos{
     color: rgb(25, 181, 253);
 }
+.femeas{
+    color: rgb(252, 133, 242);
+}
 
 .container{
      display: flex;      
@@ -40,7 +43,7 @@ header{
 }
 
 .container img {
-      width: 150px;       
-      height: 180px;
+      width: 200px;       
+      height: 230px;
       border-radius: 8px;
 }
