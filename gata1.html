@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="gata1.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoção</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaI_dxHZcNGBr-sk487NE7nr5_pkk1iyEt-kZZ6li1ZD2SkBze05gGtZGQ05y8ND51g4A&usqp=CAU"
+            alt="gata" class="gata1">
+        <div class="descricao">
+            <h2>Gata Fêmea para Adotar</h2>
+
+            <div class="info-gato">
+                <h3>Informações </h3>
+                <ul>
+                    <li><strong>Idade:</strong> 1 ano</li>
+                    <li><strong>Sexo:</strong> Fêmea</li>
+                    <li><strong>Peso:</strong> 3,5 kg</li>
+                    <li><strong>Saúde:</strong> Castrada e vacinada ✅</li>
+                    <li><strong>Personalidade:</strong> Amorosa e muito parceira 💗</li>
+                </ul>
+                <button id="adoptBtn">Adotar Agora</button>
+            </div>
+        </div>
+    </div>
+    <div id="adoptModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Formulário de Adoção 🐱</h2>
+            <form id="adoptForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required><br><br>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required><br><br>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required><br><br>
+
+                <label for="mensagem">Por que você quer adotar?</label><br>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte pra gente!"
+                    required></textarea><br><br>
+
+                <button type="submit">Enviar 🐾</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const modal = document.getElementById("adoptModal");
+        const btn = document.getElementById("adoptBtn");
+        const span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Simulação de envio do formulário
+        document.getElementById("adoptForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Yay! Formulário enviado! Entraremos em contato 😻");
+            modal.style.display = "none";
+        });
+    </script>
+
+</body>
+
+</html>
