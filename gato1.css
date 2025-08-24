@@ -1,8 +1,19 @@
 body{
-    background-color:rgb(205, 247, 243) ;
+    background-color: rgb(252, 249, 169);
 }
-img{
-    position:absolute;
-    top: 0;
-    left: 0;
+.container {
+  display: flex;        /* coloca imagem e texto lado a lado */
+   align-items: flex-start;  
+  gap: 20px;            /* espaço entre a imagem e o texto */
+  margin: 20px;
+}
+.gato1{
+     width: 250px;         /* tamanho da imagem */
+  border-radius: 10px;      /*controla onde a mensagem vai ficar*/
+  flex-shrink: 0;       /* impede a imagem de deformar */
+}
+.descricao{
+    max-width: 300px;     /* controla largura do texto */
+  text-align: left;     /* texto alinhado à esquerda */
+    color: #444444;
 }
