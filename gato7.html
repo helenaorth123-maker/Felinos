@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="gato1.css">
+ <link rel="icon" href="img\img/favicon.ico" type="image/ico" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoção</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="https://media.gazetadopovo.com.br/vozes/2016/08/gatos-robert-sijka-9-c637f9e2.jpg"
+            alt="gato fofo" class="gato1">
+        <div class="descricao">
+            <h2>Gato Macho para Adotar</h2>
+
+            <div class="info-gato">
+                <h3>Informações </h3>
+                <ul>
+                    <li><strong>Raça: </strong>Maine Coon </li> 
+                    <li><strong>Idade:</strong>5 anos</li>
+                    <li><strong>Sexo:</strong> Macho♂️</li>
+                    <li><strong>Peso:</strong>15 kg</li>
+                    <li><strong>Saúde:</strong>Vacinado e Castrado ✅</li>
+                    <li><strong>Personalidade:</strong> Carinhoso, ciumento e brincalhão🐾</li>
+                </ul>
+                <button id="adoptBtn">Adotar Agora</button>
+            </div>
+        </div>
+    </div>
+    <div id="adoptModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Formulário de Adoção 🐱</h2>
+            <form id="adoptForm">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required><br><br>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="seu@email.com" required><br><br>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required><br><br>
+
+                <label for="mensagem">Por que você quer adotar?</label><br>
+                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte pra gente!"
+                    required></textarea><br><br>
+
+                <button type="submit">Enviar 🐾</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        const modal = document.getElementById("adoptModal");
+        const btn = document.getElementById("adoptBtn");
+        const span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Simulação de envio do formulário
+        document.getElementById("adoptForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            alert("Yay! Formulário enviado! Entraremos em contato 😻");
+            modal.style.display = "none";
+        });
+    </script>
+
+</body>
+
+</html>
