@@ -26,13 +26,25 @@ header{
     padding-top: 60px; 
     text-align: center;
 } 
+header h1{
+    font-family: Playwrite CA;
+    color: rgb(61, 57, 57);
+}
+header h2{
+    font-family: 'Cute Font', cursive;
+}
+p{
+     font-family: 'Cute Font', cursive;
+}
 .machos{
     color: rgb(25, 181, 253);
     line-height: 150px;
+    font-family: Indie Flower;
 }
 .femeas{
     line-height: 150px;
     color: rgb(252, 133, 242);
+    font-family: Indie Flower;
 }
 
 .container{
@@ -50,3 +62,26 @@ header{
       height: 230px;
       border-radius: 8px;
 }
+footer{
+  color: #313030; 
+  text-align: center;
+  padding: 30px 15px;
+  font-family: 'Cute Font', cursive;
+  border-top: 4px dashed #a2b1f7; 
+}
+  nav {
+      background-color: #f2c94c; /* amarelo suave, lembra sol e fofura */
+      padding: 10px 20px;
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-family: 'Fredoka One', cursive; /* se estiver usando essa fonte */
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #e76f51; /* cor destaque ao passar o mouse */
+    }
