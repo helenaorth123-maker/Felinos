@@ -63,25 +63,25 @@ p{
       border-radius: 8px;
 }
 footer{
-  color: #313030; 
+  color: #29014b; 
   text-align: center;
   padding: 30px 15px;
   font-family: 'Cute Font', cursive;
   border-top: 4px dashed #a2b1f7; 
 }
   nav {
-      background-color: #f2c94c; /* amarelo suave, lembra sol e fofura */
       padding: 10px 20px;
       display: flex;
       gap: 20px;
+        justify-content: flex-end;
     }
     nav a {
       text-decoration: none;
       color: #333;
       font-weight: bold;
-      font-family: 'Fredoka One', cursive; /* se estiver usando essa fonte */
+       font-family: Playwrite CA;
       transition: color 0.3s ease;
     }
     nav a:hover {
-      color: #e76f51; /* cor destaque ao passar o mouse */
+      color: #5e81f5; /* cor destaque ao passar o mouse */
     }
