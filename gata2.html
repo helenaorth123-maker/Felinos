@@ -27,58 +27,29 @@
                     <li><strong>Saúde:</strong> Castrada e vacinada ✅</li>
                     <li><strong>Personalidade:</strong> Amorosa, ciumenta e ama brincar 💗</li>
                 </ul>
-                <button id="adoptBtn">Adotar Agora</button>
             </div>
         </div>
     </div>
-    <div id="adoptModal" class="modal">
+    <!-- Checkbox invisível que controla o modal -->
+    <input type="checkbox" id="modalToggle">
+
+    <!-- Botão que abre o modal -->
+    <label for="modalToggle" class="adoptBtn">Adotar</label>
+
+    <!-- Modal -->
+    <div class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Formulário de Adoção 🐱</h2>
-            <form id="adoptForm">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome" required><br><br>
+            <!-- Botão de fechar (X) -->
+            <label for="modalToggle" class="close">&times;</label>
 
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="seu@email.com" required><br><br>
-
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required><br><br>
-
-                <label for="mensagem">Por que você quer adotar?</label><br>
-                <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte pra gente!"
-                    required></textarea><br><br>
-
-                <button type="submit">Enviar 🐾</button>
+            <h2>Formulário de Adoção</h2>
+            <form onsubmit="alert('Yay! Formulário enviado! Entraremos em contato 😻')">
+                <input type="text" placeholder="Seu nome" required><br><br>
+                <input type="email" placeholder="Seu e-mail" required><br><br>
+                <button type="submit">Enviar</button>
             </form>
         </div>
     </div>
-    <script>
-        const modal = document.getElementById("adoptModal");
-        const btn = document.getElementById("adoptBtn");
-        const span = document.getElementsByClassName("close")[0];
-
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        // Simulação de envio do formulário
-        document.getElementById("adoptForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-            alert("Yay! Formulário enviado! Entraremos em contato 😻");
-            modal.style.display = "none";
-        });
-    </script>
 
 </body>
 
