@@ -219,7 +219,8 @@ info-gato {
 .close {
   color: #ff0000;
   display: flex;
-  justify-content: flex-end; /* Alinha o botão à direita */
+  justify-content: flex-end;
+  /* Alinha o botão à direita */
 }
 
 .close:hover {
